@@ -28,11 +28,12 @@ function addVehicle($brand, $model, $color,$registration){
 // TODO Fonction updateVehicle(...): Mettre à jour une véhicule
 /*function updateVehicle(){
     global $db;
-    $query= $db->prepare('UPDATE  vehicle(brand, model, color, registration) SET VALUE(:brand, :model, :color, :registration) WHERE id = :id')
-    $query->bindValue(':brand', $brand, PDO:: PARAM_STR);
-    $query->bindValue(':model', $model, PDO:: PARAM_STR);
-    $query->bindValue(':color', $color, PDO:: PARAM_STR);
-    $query->bindValue(':registration', $registration, PDO:: PARAM_STR);
+    $update= $db->prepare('UPDATE vehicle(brand, model, color, registration) SET brand = : brand, model =:model, color = :color, registration = :registration WHERE id = :id');
+    $update->bindValue(':brand', $brand, PDO:: PARAM_STR);
+    $update->bindValue(':model', $model, PDO:: PARAM_STR);
+    $update->bindValue(':color', $color, PDO:: PARAM_STR);
+    $update->bindValue(':registration', $registration, PDO:: PARAM_STR);
+    return $update ->execute();
 }
 */
 // TODO Fonction deleteVehicle(...): Supprimer une véhicule
